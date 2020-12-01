@@ -1,7 +1,7 @@
 .rmdb-header {
   width: 100%;
   height: auto;
-  background: #1c1c1c;
+  background: #000000;
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -24,8 +24,17 @@
 
 .rmdb-tmdb-logo {
   width: 122px;
-  margin-top: 25px;
+  margin-top: 0px;
   float: right;
+}
+.Title {
+  margin-top: 25px;
+  margin-left: 400px;
+  color: #ff0000;
+  font-size: 55pt;
+  float: middle;
+  font-style: bold;
+  font-family: Impact, fantasy;
 }
 
 @media screen and (max-width: 500px) {
