@@ -9,10 +9,12 @@ import {
   BACKDROP_SIZE
 } from "../../config";
 
-
+import HeroImage from "../elements/HeroImage/HeroImage";
+import SearchBar from "../elements/SearchBar/SearchBar";
 import FourColGrid from "../elements/FourColGrid/FourColGrid";
 import MovieThumb from "../elements/MovieThumb/MovieThumb";
-
+import LoadMoreBtn from "../elements/LoadMoreBtn/LoadMoreBtn";
+import Spinner from "../elements/Spinner/Spinner";
 
 class Home extends Component {
   state = {
@@ -81,7 +83,18 @@ class Home extends Component {
   render() {
     return (
       <div className="rmdb-home">
-        
+        {this.state.heroImage ? (
+          <div>
+            <HeroImage
+              image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${
+                this.state.heroImage.backdrop_path
+              }`}
+              title={this.state.heroImage.original_title}
+              text={this.state.heroImage.overview}
+            />
+            <SearchBar callback={this.searchItems} />
+          </div>
+        ) : null}
         <div className="rmdb-home-grid">
           <FourColGrid
             header={this.state.searchTerm ? "Search Result" : "Popular Movies"}
@@ -103,6 +116,11 @@ class Home extends Component {
               );
             })}
           </FourColGrid>
+          {this.state.loading ? <Spinner /> : null}
+          {this.state.currentPage <= this.state.totalPages &&
+          !this.state.loading ? (
+            <LoadMoreBtn text="Load More" onClick={this.loadMoreItems} />
+          ) : null}
         </div>
       </div>
     );
