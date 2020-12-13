@@ -1,16 +1,16 @@
 .rmdb-loadmorebtn {
-  background: #d10c0c;
+  background: #f8e808;
   width: 100%;
   min-height: 50px;
   text-align: center;
-  color: #fff;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .rmdb-loadmorebtn p {
-  font-family: 'Abel', sans-serif;
-  font-size:42px;
+  font-family: 'Netflix Sans',sans-serif;
+  font-size:45px;
   padding: 20px;
 }
 

@@ -88,7 +88,7 @@ class Home extends Component {
         ) : null}
         <div className="rmdb-home-grid">
           <FourColGrid
-            header={this.state.searchTerm ? "Search Result" : "Popular Movies"}
+            header={this.state.searchTerm ? "Search Result" : "New Arrivals"}
             loading={this.state.loading}
           >
             {this.state.movies.map((element, i) => {
@@ -112,6 +112,14 @@ class Home extends Component {
           !this.state.loading ? (
             <LoadMoreBtn text="Show more films" onClick={this.loadMoreItems} />
           ) : null}
+          <div className="Title">Title data courtesy of IMDb</div>
+          <div>
+          <img
+            src="./images/tmdb_logo.png"
+            className="logo-type"
+            alt="logo-type"
+          />
+          </div>
         </div>
       </div>
     );

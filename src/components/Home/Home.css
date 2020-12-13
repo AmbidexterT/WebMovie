@@ -7,3 +7,14 @@
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.Title {
+  font-size: 20pt;
+  color: #ffffff;
+  font-family: 'Netflix Sans',sans-serif;
+}
+
+.logo-type {
+  max-width: 200px;
+  margin: 0 auto;
+}
