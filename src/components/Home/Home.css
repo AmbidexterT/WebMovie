@@ -9,12 +9,12 @@
 }
 
 .Title {
-  font-size: 20pt;
-  color: #ffffff;
+  font-size: 15pt;
+  color: #ffffff9d;
   font-family: 'Netflix Sans',sans-serif;
 }
 
 .logo-type {
-  max-width: 200px;
-  margin: 0 auto;
+  max-width: 100px;
+  float: left;
 }

@@ -8,6 +8,7 @@ import {
   POSTER_SIZE
 } from "../../config";
 
+
 import SearchBar from "../elements/SearchBar/SearchBar";
 import FourColGrid from "../elements/FourColGrid/FourColGrid";
 import MovieThumb from "../elements/MovieThumb/MovieThumb";
