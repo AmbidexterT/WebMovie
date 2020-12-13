@@ -5,11 +5,9 @@ import {
   API_URL,
   API_KEY,
   IMAGE_BASE_URL,
-  POSTER_SIZE,
-  BACKDROP_SIZE
+  POSTER_SIZE
 } from "../../config";
 
-import HeroImage from "../elements/HeroImage/HeroImage";
 import SearchBar from "../elements/SearchBar/SearchBar";
 import FourColGrid from "../elements/FourColGrid/FourColGrid";
 import MovieThumb from "../elements/MovieThumb/MovieThumb";
@@ -85,13 +83,6 @@ class Home extends Component {
       <div className="rmdb-home">
         {this.state.heroImage ? (
           <div>
-            <HeroImage
-              image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${
-                this.state.heroImage.backdrop_path
-              }`}
-              title={this.state.heroImage.original_title}
-              text={this.state.heroImage.overview}
-            />
             <SearchBar callback={this.searchItems} />
           </div>
         ) : null}
@@ -119,7 +110,7 @@ class Home extends Component {
           {this.state.loading ? <Spinner /> : null}
           {this.state.currentPage <= this.state.totalPages &&
           !this.state.loading ? (
-            <LoadMoreBtn text="Load More" onClick={this.loadMoreItems} />
+            <LoadMoreBtn text="Show more films" onClick={this.loadMoreItems} />
           ) : null}
         </div>
       </div>

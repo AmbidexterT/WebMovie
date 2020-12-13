@@ -13,12 +13,6 @@ const Header = () => {
             alt="rmdb-logo"
           />
         </Link>
-        <div className="Title">FanFilms</div>
-        <img
-          src="./images/tmdb_logo.png"
-          className="rmdb-tmdb-logo"
-          alt="tmdb-logo"
-        />
       </div>
     </div>
   );

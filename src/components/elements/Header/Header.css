@@ -17,24 +17,11 @@
 }
 
 .rmdb-logo {
-  width: 300px;
+  width: 700px;
   margin-top: 20px;
-  float: left;
-}
-
-.rmdb-tmdb-logo {
-  width: 122px;
-  margin-top: 0px;
-  float: right;
-}
-.Title {
-  margin-top: 25px;
-  margin-left: 400px;
-  color: #ff0000;
-  font-size: 55pt;
+  margin-left: 250px;
+  margin-right: 250px;
   float: middle;
-  font-style: bold;
-  font-family: Impact, fantasy;
 }
 
 @media screen and (max-width: 500px) {
