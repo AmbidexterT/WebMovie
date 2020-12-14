@@ -1,13 +1,46 @@
 .rmdb-movieinfo {
-  background-size: cover !important;
-  background-position: center !important;
+  background-size: cover!important;
+  background-position: 50%!important;
   width: 100%;
   height: 600px;
   padding: 40px 20px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-animation: animateMovieinfo 1s;
   animation: animateMovieinfo 1s;
 }
-
+.rmdb-movieinfo-text, .rmdb-movieinfo-thumb {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+.rmdb-movieinfo-thumb {
+  width: 350px;
+  left: 0;
+}
+.rmdb-movieinfo-text {
+  font-family: 'Netflix Sans',sans-serif;
+  width: auto;
+  padding: 40px;
+  color: #ffffff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 360px;
+}
+ .rmdb-movieinfo-thumb {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+.h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
 @keyframes animateMovieinfo {
   from {
       opacity:0;
@@ -26,25 +59,6 @@
   position: relative;
 }
 
-.rmdb-movieinfo-thumb {
-  width: 350px;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  left: 0px;
-}
-
-.rmdb-movieinfo-text {
-  font-family: Arial, Helvetica, sans-serif;
-  height: 100%;
-  width: auto;
-  padding: 40px;
-  color: #fff;
-  overflow: hidden;
-  box-sizing: border-box;
-  position: absolute;
-  left: 360px;
-}
 
 .rmdb-movieinfo-text h1 {
   font-family: 'Abel', sans-serif;
@@ -82,12 +96,6 @@
   margin: 0;
 }
 
-.fa-film {
-  position: absolute;
-  bottom: 40px;
-  right: 40px;
-  color: #fff;
-}
 
 meter::-webkit-meter-bar {
   background: #FFF;
