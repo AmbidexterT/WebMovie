@@ -46,6 +46,7 @@
   color: #fff;
 }
 
+
 @media screen and (max-width: 720px) {
   .rmdb-heroimage-text {
     max-width: 100%;

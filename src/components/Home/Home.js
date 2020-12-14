@@ -92,6 +92,7 @@ class Home extends Component {
             header={this.state.searchTerm ? "Search Result" : "New Arrivals"}
             loading={this.state.loading}
           >
+            
             {this.state.movies.map((element, i) => {
               return (
                 <MovieThumb
@@ -99,7 +100,7 @@ class Home extends Component {
                   clickable={true}
                   image={
                     element.poster_path
-                      ? `${IMAGE_BASE_URL}${POSTER_SIZE}/${element.poster_path}`
+                      ? `${IMAGE_BASE_URL}${POSTER_SIZE}/${element.poster_path}`  
                       : "./images/no_image.jpg"
                   }
                   movieId={element.id}
