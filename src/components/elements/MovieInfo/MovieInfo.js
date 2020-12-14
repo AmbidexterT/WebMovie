@@ -3,7 +3,7 @@ import { IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from "../../../config";
 import FontAwesome from "react-fontawesome";
 import MovieThumb from "../MovieThumb/MovieThumb";
 import "./MovieInfo.css";
-
+import { calcTime } from "../../../helpers";
 const MovieInfo = props => {
   return (
     <div
@@ -29,7 +29,7 @@ const MovieInfo = props => {
           </div>
           <div className="rmdb-movieinfo-text">
             <h1>{props.movie.title}</h1>
-            <h3>PLOT</h3>
+            <h3>SYNOPSIS</h3>
             <p>{props.movie.overview}</p>
             <h3>IMDB RATING</h3>
             <div className="rmdb-rating">
@@ -55,6 +55,16 @@ const MovieInfo = props => {
                 </p>
               );
             })}
+            <div className="rmdb-movieinfobar">
+             <div className="rmdb-movieinfobar-content">
+        <div className="rmdb-movieinfobar-content-col">
+          <FontAwesome className="fa-time" name="clock-o" size="2x" />
+          <span className="rmdb-movieinfobar-info">
+            Running Time: {calcTime(props.time)}
+          </span>
+        </div>
+      </div>
+    </div>
           </div>
           <FontAwesome className="fa-film" name="film" size="5x" />
         </div>
